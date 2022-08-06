@@ -1,15 +1,15 @@
 using DG.Tweening;
 using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(Collider))]
 public class VisitingColliderView : MonoBehaviour
 {
-    private SphereCollider _collider;
+    private Collider _collider;
     private SolarSystemModel _solarSystemModel;
     
     private void Start()
     {
-        _collider = GetComponent<SphereCollider>();
+        _collider = GetComponent<Collider>();
         _collider.enabled = false;
 
         _solarSystemModel = FindObjectOfType<SolarSystemModel>();

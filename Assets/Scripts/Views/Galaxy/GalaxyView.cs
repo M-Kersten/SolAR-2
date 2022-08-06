@@ -25,7 +25,7 @@ public class GalaxyView: MonoBehaviour
     void UncoupleSun()
     {
         Star.transform.SetParent(transform);
-        Star.transform.DOScale(Star.transform.localScale * 5, _galaxyModel.ZoomInDuration).SetEase(Ease.InOutSine);
+        Star.transform.DOScale(Star.transform.localScale * 3, _galaxyModel.ZoomInDuration).SetEase(Ease.InOutSine);
     }
 
     void ScaleInGalaxy(Vector3 location)

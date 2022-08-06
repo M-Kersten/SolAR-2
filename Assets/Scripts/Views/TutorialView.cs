@@ -20,7 +20,7 @@ public class TutorialView : MonoBehaviour
         _tutorialModel.OnTutorialFinished += CompleteTutorial;
         
         _tutorialText.SetText(string.Empty);
-        _tutorialCamera.enabled = false;
+        _tutorialCamera.gameObject.SetActive(false);
         _tutorialCanvas.enabled = false;
     }
 
@@ -28,7 +28,7 @@ public class TutorialView : MonoBehaviour
     {
         var currentTutorialInfo = _tutorialModel.CurrentTutorial;
         _tutorialText.SetText(currentTutorialInfo.Text);
-        _tutorialCamera.enabled = true;
+        _tutorialCamera.gameObject.SetActive(true);
         _tutorialCanvas.enabled = true;
     }
 
@@ -40,7 +40,7 @@ public class TutorialView : MonoBehaviour
 
     void CompleteTutorial()
     {
-        _tutorialCamera.enabled = false;
+        _tutorialCamera.gameObject.SetActive(false);
         _tutorialCanvas.enabled = false;
     }
 }
