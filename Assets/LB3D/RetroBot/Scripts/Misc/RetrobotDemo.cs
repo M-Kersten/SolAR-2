@@ -8,7 +8,7 @@ public class RetrobotDemo : MonoBehaviour
     public GameObject[] retrobots;
     public Transform retrobotAnchor;
 
-    private RetrobotController retrobotController;
+    private RetrobotView _retrobotView;
     public GameObject retroBot;
 
     public Dropdown actions;
@@ -37,7 +37,7 @@ public class RetrobotDemo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        retrobotController = retroBot.GetComponent<RetrobotController>();
+        _retrobotView = retroBot.GetComponent<RetrobotView>();
         SpawnRobot(0);
         robotName.text = "RetroBot";
          
@@ -60,7 +60,7 @@ public class RetrobotDemo : MonoBehaviour
         retroBot.transform.position = retrobotAnchor.transform.position;
         retroBot.transform.rotation = retrobotAnchor.transform.rotation;
         retroBot.transform.parent = retrobotAnchor.transform;
-        retrobotController = retroBot.GetComponent<RetrobotController>();
+        _retrobotView = retroBot.GetComponent<RetrobotView>();
 
         RetrobotIconManager icons = retroBot.GetComponent<RetrobotIconManager>();
 
@@ -104,19 +104,19 @@ public class RetrobotDemo : MonoBehaviour
         SpawnRobot(index);
     }
     public void DoAction() {        
-        retrobotController.DoAction(actions.options[actions.value].text);
+        //_retrobotView.DoAction(actions.options[actions.value].text);
     }
 
     public void UpdateMotionX(float value)
     {
-        retrobotController.SetMotionXState(value);
+        _retrobotView.SetMotionXState(value);
     }
     public void UpdateMotionY(float value) {
-        retrobotController.SetMotionYState(value);
+        _retrobotView.SetMotionYState(value);
     }
 
     public void UpdateIdlePattern(float value) {
-        retrobotController.SetIdleState(value);
+        _retrobotView.SetIdleState(value);
     }
 
     public void UpdateRotation(float value)
@@ -125,7 +125,7 @@ public class RetrobotDemo : MonoBehaviour
     }
 
     public void ToggleFightingPose(bool on) {
-        retrobotController.SetFightIdle(on);
+        _retrobotView.SetFightIdle(on);
     }
 
     public void ActivateTurnTable(bool on) {

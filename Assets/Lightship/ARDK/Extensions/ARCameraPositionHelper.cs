@@ -11,7 +11,6 @@ using UnityEngine.Serialization;
 
 namespace Niantic.ARDK.Extensions
 {
-  /// A helper component to automatically position the scene rendering AR content and transform its output
   public class ARCameraPositionHelper: MonoBehaviour
   {
     [FormerlySerializedAs("Camera")]
@@ -20,7 +19,6 @@ namespace Niantic.ARDK.Extensions
     [Tooltip("The scene camera used to render AR content.")]
     private Camera _camera;
 
-    /// Returns a reference to the scene camera used to render AR content, if present.
     public Camera Camera
     {
       get => _camera;

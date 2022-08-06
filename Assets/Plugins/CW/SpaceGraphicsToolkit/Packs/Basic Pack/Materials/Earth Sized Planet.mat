@@ -2,16 +2,30 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Earth Sized Planet
   m_Shader: {fileID: 4800000, guid: 768a73c8cfe57ab46943868314e13a32, type: 3}
-  m_ShaderKeywords: SGT_A _BAKEDDETAIL _BAKEDDETAIL_DEF_1 _BAKEDDETAIL_ON _BAKEDDETAIL_ON_DEF_1
-    _BAKEDDETAIL_ON_DEF_2 _DETAIL _DETAIL_DEF_2 _DETAIL_NORMAL _DETAIL_R _NORMALMAP
-    _SHORE_DETAIL_C _SHORE_ON _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+  m_ValidKeywords:
+  - _BAKEDDETAIL_ON
+  - _BAKEDDETAIL_ON_DEF_1
+  - _BAKEDDETAIL_ON_DEF_2
+  - _DETAIL_NORMAL
+  - _DETAIL_R
+  - _NIGHT
+  - _SHORE_DETAIL_C
+  - _SHORE_ON
+  m_InvalidKeywords:
+  - SGT_A
+  - _BAKEDDETAIL
+  - _BAKEDDETAIL_DEF_1
+  - _DETAIL
+  - _DETAIL_DEF_2
+  - _NORMALMAP
+  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -174,11 +188,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 4b5ae8939ea814b4085531ff1b0fc50b, type: 3}
+        m_Texture: {fileID: 2800000, guid: e636ebf2faf644253aac3b1cc3657b8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7909b829bdc8e3a48b602304cdfb2c16, type: 3}
+        m_Texture: {fileID: 2800000, guid: b61b135b7d7977e4e9691e9a62177c5c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -190,11 +204,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NightTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fbc1eda1364496144a2728298a8ba1de, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 48b8c3d56d560304192cad77927cb11b, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapA:
@@ -249,6 +263,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlbedoShift: 0
     - _BakedDetailFadeBound: 2000000
@@ -324,7 +351,7 @@ Material:
     - _HasDetailR: 1
     - _HasDetail_Ext_1: 0
     - _HasDetail_Ext_2: 1
-    - _HasNight: 0
+    - _HasNight: 1
     - _HasShore: 1
     - _HasWater: 0
     - _IceOverWater: 0
@@ -334,6 +361,8 @@ Material:
     - _NightSharpness: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
     - _ShoreNoiseTiling: 1
     - _ShoreRange: 50
     - _Shore_Detail: 2
@@ -365,3 +394,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []

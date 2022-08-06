@@ -15,7 +15,7 @@ MonoBehaviour:
   title: Space Graphics Toolkit/Flare
   target: {fileID: 4800000, guid: f1f0f1b77370c8945bf492bc86885b8c, type: 3}
   variantHash: 171129982
-  projectHash: -1308908763
+  projectHash: -1019878844
   variants:
   - Pipe: 0
     Code: "//<HASH>-244236969</HASH>\n////////////////////////////////////////\n//

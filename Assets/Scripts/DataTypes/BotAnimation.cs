@@ -1,0 +1,22 @@
+[System.Serializable]
+public enum BotAnimation
+{
+    Do_Flip_Happy,
+    Do_Giggle,
+    Do_Angry_Dramatic,
+    Do_FacePalm,
+    Do_Dissapointed_Slow_Shake,
+    Do_Distracted,
+    Do_Get_Attention,
+    Do_Hat_Gesture,
+    Do_Huh,
+    Do_Nod_No,
+    Do_Nod_Yes,
+    Do_Present_Left,
+    Do_Present_Right,
+    Do_Spin,
+    Do_Talking_Head,
+    Do_Talking_Head_Hands_Body,
+    Do_Thinking,
+    Do_Wave_Simple
+}
