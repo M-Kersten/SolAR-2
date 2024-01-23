@@ -3324,12 +3324,12 @@ GameObject:
   - component: {fileID: 329930634}
   - component: {fileID: 329930637}
   - component: {fileID: 329930636}
-  - component: {fileID: 329930635}
-  - component: {fileID: 329930638}
-  - component: {fileID: 329930639}
-  - component: {fileID: 329930640}
-  - component: {fileID: 329930641}
+  - component: {fileID: 329930643}
   - component: {fileID: 329930642}
+  - component: {fileID: 329930641}
+  - component: {fileID: 329930640}
+  - component: {fileID: 329930639}
+  - component: {fileID: 329930638}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -3364,26 +3364,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f96f84517c674b8084c6ddac1dac77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GalaxyModel: {fileID: 1675386817}
-  PlayerStateModel: {fileID: 1675386822}
---- !u!114 &329930635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329930631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58812bf222f3f41cf8c5f18d0d5c3eb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogController: {fileID: 329930636}
-  FaderModel: {fileID: 1675386816}
-  GalaxyModel: {fileID: 1675386817}
-  PlacementModel: {fileID: 1675386815}
-  SolarSystemController: {fileID: 329930638}
-  PlayerStateModel: {fileID: 1675386822}
+  GalaxyModel: {fileID: 1675386822}
+  PlayerStateModel: {fileID: 1675386817}
 --- !u!114 &329930636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3396,7 +3378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7bbcf4d0d4a4888a52e978ff7872f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogModel: {fileID: 1675386818}
+  DialogModel: {fileID: 1675386820}
 --- !u!114 &329930637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,8 +3391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4754b93d3cb148f9bc2ebc04f966990c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BotModel: {fileID: 1675386819}
-  PlanetModel: {fileID: 1675386821}
+  BotModel: {fileID: 1675386821}
+  PlanetModel: {fileID: 1675386818}
 --- !u!114 &329930638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3420,10 +3402,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 329930631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc3e3f28f5a149aaa5533a523a69b039, type: 3}
+  m_Script: {fileID: 11500000, guid: 898c56947499a420c9fde94d661041e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SolarSystemModel: {fileID: 1675386820}
+  MinigameModel: {fileID: 1675386815}
+  PlayerStateModel: {fileID: 1675386817}
 --- !u!114 &329930639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3433,12 +3416,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 329930631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33115f4cc3a0448585255c87750ef863, type: 3}
+  m_Script: {fileID: 11500000, guid: 99b523fa7f5814ef7ad53df7c9aa080e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlanetModel: {fileID: 1675386821}
-  StateModel: {fileID: 1675386822}
-  FaderModel: {fileID: 1675386816}
+  PlayerStateModel: {fileID: 1675386817}
+  TutorialModel: {fileID: 1675386816}
 --- !u!114 &329930640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3448,12 +3430,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 329930631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ec38c776744d0b97b7de66d9d8728e, type: 3}
+  m_Script: {fileID: 11500000, guid: 223e9156c50b743e0a78706b5bd3412e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TutorialModel: {fileID: 1675386823}
-  PlayerStateModel: {fileID: 1675386822}
-  FaderModel: {fileID: 1675386816}
+  TutorialModel: {fileID: 1675386816}
+  PlayerStateModel: {fileID: 1675386817}
+  FaderModel: {fileID: 1675386823}
 --- !u!114 &329930641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3463,11 +3445,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 329930631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5829ed43d1b84054b7c2fc73dccafdba, type: 3}
+  m_Script: {fileID: 11500000, guid: d8f491927ee524d89a9085bef3f84707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerStateModel: {fileID: 1675386822}
-  TutorialModel: {fileID: 1675386823}
+  PlanetModel: {fileID: 1675386818}
+  StateModel: {fileID: 1675386817}
+  FaderModel: {fileID: 1675386823}
 --- !u!114 &329930642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3477,11 +3460,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 329930631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c379bc3dd734de7a6d9f6c3c1a65809, type: 3}
+  m_Script: {fileID: 11500000, guid: ad757aa25f4ac465a877650a0b7882f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MinigameModel: {fileID: 1675386824}
-  PlayerStateModel: {fileID: 1675386822}
+  SolarSystemModel: {fileID: 1675386819}
+--- !u!114 &329930643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329930631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520da8d4b7f9a486c87e658393cf3803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogController: {fileID: 329930636}
+  FaderModel: {fileID: 1675386823}
+  GalaxyModel: {fileID: 1675386822}
+  PlacementModel: {fileID: 1675386824}
+  SolarSystemController: {fileID: 329930642}
+  PlayerStateModel: {fileID: 1675386817}
 --- !u!1 &339974622
 GameObject:
   m_ObjectHideFlags: 0
@@ -7965,8 +7965,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 413, y: 0}
+  m_SizeDelta: {x: 786, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075238527
 MonoBehaviour:
@@ -8499,7 +8499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 623.3861, y: 0}
   m_SizeDelta: {x: 826, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1173588846
@@ -9858,8 +9858,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 413, y: 0}
+  m_SizeDelta: {x: 786, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510234607
 MonoBehaviour:
@@ -11071,7 +11071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 623.3861, y: 0}
   m_SizeDelta: {x: 826, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1630456756
@@ -11191,16 +11191,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1675386814}
-  - component: {fileID: 1675386815}
-  - component: {fileID: 1675386816}
-  - component: {fileID: 1675386817}
+  - component: {fileID: 1675386824}
+  - component: {fileID: 1675386823}
+  - component: {fileID: 1675386822}
+  - component: {fileID: 1675386821}
+  - component: {fileID: 1675386820}
   - component: {fileID: 1675386819}
   - component: {fileID: 1675386818}
-  - component: {fileID: 1675386820}
-  - component: {fileID: 1675386821}
-  - component: {fileID: 1675386822}
-  - component: {fileID: 1675386823}
-  - component: {fileID: 1675386824}
+  - component: {fileID: 1675386817}
+  - component: {fileID: 1675386816}
+  - component: {fileID: 1675386815}
   m_Layer: 0
   m_Name: Models
   m_TagString: Untagged
@@ -11232,15 +11232,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 021476b99d644cbf95f1f330893d74bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 092c765fd63f14738b42e56fe1f67b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SolarSystem: {fileID: 3350728468782075770, guid: ffca361d4323740b899b6a9df4f4cda7,
-    type: 3}
-  SpawnDistance: 6
-  MinMaxScale: {x: 0.5, y: 2}
-  RenderingManager: {fileID: 5511341021397638515}
-  ArCamera: {fileID: 2095243949}
+  _timeLimit: 60
+  SecondsLeft: 0
 --- !u!114 &1675386816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11250,10 +11246,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36d4bf457754b54b055a9d670c0ce55, type: 3}
+  m_Script: {fileID: 11500000, guid: 856e20b5824ce41ee952bbcb6ff127fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDuration: 0.5
+  TutorialDialogs:
+  - {fileID: 11400000, guid: ce8c44f4219fa421a82cd229f19cac5a, type: 2}
+  - {fileID: 11400000, guid: 73ce1e03cfe0d458598255e7a770fb19, type: 2}
+  - {fileID: 11400000, guid: fd7cd9ac7e60f418e871a81d87e2cc42, type: 2}
+  DebugTutorial: 0
+  ActiveTutorialStep: 0
+  TutorialSeen: 1
 --- !u!114 &1675386817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11263,13 +11265,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f05073cfb914fb4aebce4b1c9d7381b, type: 3}
+  m_Script: {fileID: 11500000, guid: 71809fe6514e74df98a7422d9352b029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RenderingManager: {fileID: 5511341021397638515}
-  ScaleAmount: 35
-  ZoomInDuration: 3
-  SelectedGalaxyButtonType: 0
 --- !u!114 &1675386818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11279,58 +11277,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 647031682bab406a9bfd54985da3f3cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GreetDialog: {fileID: 11400000, guid: 990e7280c89a4427dbd366dc1639db96, type: 2}
-  ExplainPlacementDialog: {fileID: 11400000, guid: 387a4b8dc5a944c88b49e434334a3ac8,
-    type: 2}
-  VisitDialog: {fileID: 11400000, guid: f8cd3c00cff3a4b629d4129a5531b8b8, type: 2}
-  WellDoneDialog: {fileID: 11400000, guid: ab05c6efe9213499cb4e59ca03193b03, type: 2}
---- !u!114 &1675386819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675386813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d176765bc6b34661a3788ffa8065fe84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StatePresets:
-  - State: 0
-    Icon: {fileID: 0}
-    Color: {r: 0.18431373, g: 0.34901962, b: 0.5372549, a: 1}
-  - State: 1
-    Icon: {fileID: 2800000, guid: 2ee190d642938fc47afab04bc120d337, type: 3}
-    Color: {r: 0.191309, g: 0.5372549, b: 0.18431373, a: 1}
-  - State: 2
-    Icon: {fileID: 2800000, guid: a685aa7ba5f7a074f8a84237bbab1032, type: 3}
-    Color: {r: 0.19215687, g: 0.5372549, b: 0.18431373, a: 1}
---- !u!114 &1675386820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675386813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ed4fd9cba4d4de29af86d03e017063a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1675386821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675386813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2382eac447bd40cbb2d4e8e16a05e929, type: 3}
+  m_Script: {fileID: 11500000, guid: 03ede22f9c5c543889a53237d28a48d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpaceSkybox: {fileID: 2100000, guid: 2d056ac30ecc9e542b26e06133f23602, type: 2}
@@ -11343,6 +11290,57 @@ MonoBehaviour:
   - {fileID: 11400000, guid: da57680b700194021b13f674fa70791a, type: 2}
   - {fileID: 11400000, guid: f1556d4eaaf694a76bc90690799088ab, type: 2}
   - {fileID: 11400000, guid: 41160a7c28e5f4f609fa89ab9fa49e2c, type: 2}
+--- !u!114 &1675386819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675386813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3541ddb9702bc4744aef94984c816cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1675386820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675386813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f1a3d8d4ab864f81bb11b828818e424, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GreetDialog: {fileID: 11400000, guid: 990e7280c89a4427dbd366dc1639db96, type: 2}
+  ExplainPlacementDialog: {fileID: 11400000, guid: 387a4b8dc5a944c88b49e434334a3ac8,
+    type: 2}
+  VisitDialog: {fileID: 11400000, guid: f8cd3c00cff3a4b629d4129a5531b8b8, type: 2}
+  WellDoneDialog: {fileID: 11400000, guid: ab05c6efe9213499cb4e59ca03193b03, type: 2}
+--- !u!114 &1675386821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675386813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dfbe4e18fcb4e0f8ec048bef7d9a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StatePresets:
+  - State: 0
+    Icon: {fileID: 0}
+    Color: {r: 0, g: 0.1788388, b: 0.40784314, a: 1}
+  - State: 1
+    Icon: {fileID: 2800000, guid: 2ee190d642938fc47afab04bc120d337, type: 3}
+    Color: {r: 0, g: 0.5, b: 0.045871735, a: 1}
+  - State: 2
+    Icon: {fileID: 2800000, guid: a685aa7ba5f7a074f8a84237bbab1032, type: 3}
+    Color: {r: 0, g: 0.5019608, b: 0.047058824, a: 1}
 --- !u!114 &1675386822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11352,9 +11350,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e4edc1f5bcd4936a74b4f49dd8f6394, type: 3}
+  m_Script: {fileID: 11500000, guid: 4460de07ec8994cb2907b3f0dc04dfeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RenderingManager: {fileID: 5511341021397638515}
+  ScaleAmount: 35
+  ZoomInDuration: 3
+  SelectedGalaxyButtonType: 0
 --- !u!114 &1675386823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11364,16 +11366,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2120baa2709b04ab4bb622543a692f28, type: 3}
+  m_Script: {fileID: 11500000, guid: b36d4bf457754b54b055a9d670c0ce55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TutorialDialogs:
-  - {fileID: 11400000, guid: ce8c44f4219fa421a82cd229f19cac5a, type: 2}
-  - {fileID: 11400000, guid: 73ce1e03cfe0d458598255e7a770fb19, type: 2}
-  - {fileID: 11400000, guid: fd7cd9ac7e60f418e871a81d87e2cc42, type: 2}
-  DebugTutorial: 0
-  ActiveTutorialStep: 0
-  TutorialSeen: 1
+  fadeDuration: 0.5
 --- !u!114 &1675386824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11383,11 +11379,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675386813}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7081fc445c454d99912a067c6526cc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 84251a7f59381429ebc2a34f71746ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeLimit: 60
-  SecondsLeft: 0
+  SolarSystem: {fileID: 3350728468782075770, guid: ffca361d4323740b899b6a9df4f4cda7,
+    type: 3}
+  SpawnDistance: 6
+  MinMaxScale: {x: 0.5, y: 2}
+  RenderingManager: {fileID: 5511341021397638515}
+  ArCamera: {fileID: 2095243949}
 --- !u!1 &1699503995
 GameObject:
   m_ObjectHideFlags: 0
