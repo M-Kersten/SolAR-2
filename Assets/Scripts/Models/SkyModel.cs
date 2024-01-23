@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SkyModel : MonoBehaviour
@@ -64,8 +62,8 @@ public class SkyModel : MonoBehaviour
     // Ref to sun VO
     private HorizonVO sunVO;
 
-    private List<GameObject> planetGOs = new List<GameObject>();
-    private List<GameObject> satelliteGOs = new List<GameObject>();
+    private List<GameObject> planetGOs = new();
+    private List<GameObject> satelliteGOs = new();
 
     private bool isInitialized;
     // Current simulation index based on minute of day
