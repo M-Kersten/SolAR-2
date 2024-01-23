@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -63,6 +64,17 @@ public class RetrobotView : MonoBehaviour
         animator.SetFloat(_motionY, 0);
         _originalScale = transform.localScale;
         transform.localScale = Vector3.zero;
+    }
+
+    private void OnDestroy()
+    {
+        _dialogModel.OnTalk -= AnimateTalk;
+        _botModel.OnGoToPlanet -= FlyToPlanet;
+        _botModel.OnBackToPlayer -= BackToPlayer;
+        _botModel.OnBotStateChanged -= StateChange;
+        _botModel.OnGoToPosition -= GoToPosition;
+        _galaxyModel.OnStartGame -= Spawn;
+        _playerStateModel.OnStateChanged -= CheckState;
     }
 
     void CheckState(PlayerState state)

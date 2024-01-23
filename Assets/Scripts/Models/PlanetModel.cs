@@ -6,7 +6,8 @@ public class PlanetModel: MonoBehaviour
 {
     public Material SpaceSkybox;
     public PlanetInfo[] PlanetInfos;
-    
+
+    public readonly string VisitorColliderTag = "VisitCollider";
     
     public delegate void Eventhandler(Transform position);
     public event Eventhandler OnSpawnedOnPlanet;

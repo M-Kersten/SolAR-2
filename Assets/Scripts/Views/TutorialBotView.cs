@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -42,6 +43,13 @@ public class TutorialBotView : MonoBehaviour
         _originalPosition = transform.position;
         transform.position += Vector3.right * 3;
         transform.DOMove(_originalPosition, 1.5f).SetEase(Ease.OutBack);
+    }
+
+    private void OnDestroy()
+    {
+        _tutorialModel.OnTutorialStart -= AnimateTutorial;
+        _tutorialModel.OnNextTutorialStep -= AnimateTutorial;
+        _tutorialModel.OnAllStepsCompleted -= Disable;
     }
 
     void Update()

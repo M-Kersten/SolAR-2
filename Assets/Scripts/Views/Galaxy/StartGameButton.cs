@@ -11,7 +11,7 @@ public class StartGameButton: MonoBehaviour
     
     private void Start()
     {
-        _arCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _arCamera = Camera.main.GetComponent<Camera>();
         _galaxyController = FindObjectOfType<GalaxyController>();
         if(_galaxyController)
             GetComponent<Button>().onClick.AddListener(() =>

@@ -1,3 +1,4 @@
+using System;
 using Michsky.UI.ModernUIPack;
 
 using UnityEngine;
@@ -23,6 +24,11 @@ public class GalaxyMenuView : MonoBehaviour
         foreach (var backButton in BackButtons)
             backButton.onClick.AddListener(GoBack);
         _galaxyModel.OnZoomInComplete += SetActiveMenu;
+    }
+
+    private void OnDestroy()
+    {
+        _galaxyModel.OnZoomInComplete -= SetActiveMenu;
     }
 
     void GoBack()

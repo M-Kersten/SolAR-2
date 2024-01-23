@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -16,10 +17,13 @@ public class VisitingColliderView : MonoBehaviour
         _solarSystemModel.OnSolarSystemSpawned += DelayedEnableCollider;
     }
 
+    private void OnDestroy()
+    {
+        _solarSystemModel.OnSolarSystemSpawned -= DelayedEnableCollider;
+    }
+
     void DelayedEnableCollider()
     {
         DOVirtual.DelayedCall(4, () => _collider.enabled = true);
     }
-    
-    
 }

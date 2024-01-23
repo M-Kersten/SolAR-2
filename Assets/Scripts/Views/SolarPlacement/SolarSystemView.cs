@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SolarSystemView: MonoBehaviour
@@ -18,7 +19,17 @@ public class SolarSystemView: MonoBehaviour
             _solarSystemModel.OnSolarSystemSpawned += SpawnPlanets;
 
         _playerStateModel = FindObjectOfType<PlayerStateModel>();
-        _playerStateModel.OnStateChanged += CheckSetActive;
+        if (_playerStateModel)
+            _playerStateModel.OnStateChanged += CheckSetActive;
+    }
+
+    private void OnDestroy()
+    {
+        if (_solarSystemModel)
+            _solarSystemModel.OnSolarSystemSpawned -= SpawnPlanets;
+
+        if (_playerStateModel)
+            _playerStateModel.OnStateChanged -= CheckSetActive;
     }
 
     void CheckSetActive(PlayerState state)

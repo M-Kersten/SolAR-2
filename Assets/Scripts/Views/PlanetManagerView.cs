@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlanetManagerView : MonoBehaviour
@@ -10,10 +11,15 @@ public class PlanetManagerView : MonoBehaviour
     
     void Start()
     {
-        _arCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _arCamera = Camera.main.GetComponent<Camera>();
         _planetModel = FindObjectOfType<PlanetModel>();
         _stateModel = FindObjectOfType<PlayerStateModel>();
         _stateModel.OnStateChanged += UpdateSurface;
+    }
+
+    private void OnDestroy()
+    {
+        _stateModel.OnStateChanged -= UpdateSurface;
     }
 
     void UpdateSurface(PlayerState state)

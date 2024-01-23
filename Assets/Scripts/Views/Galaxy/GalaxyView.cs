@@ -22,6 +22,16 @@ public class GalaxyView: MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (_galaxyModel)
+        {
+            _galaxyModel.OnZoomInStart -= ScaleInGalaxy;
+            _galaxyModel.OnZoomOutStart -= ScaleOutGalaxy;
+            _galaxyModel.OnUncoupleStar -= UncoupleSun;
+        }
+    }
+
     void UncoupleSun()
     {
         Star.transform.SetParent(transform);

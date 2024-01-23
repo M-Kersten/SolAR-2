@@ -20,6 +20,16 @@ public class FaderView: MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (_faderModel)
+        {
+            _faderModel.OnFadeStart -= FadeIn;
+            _faderModel.OnFullyFaded -= FadeOut;
+            _faderModel.OnFadeComplete -= FadeComplete;
+        }
+    }
+
     void FadeIn()
     {
         FadeImage.raycastTarget = true;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,11 @@ public class CameraManagerView : MonoBehaviour
         _playerStateModel = FindObjectOfType<PlayerStateModel>();
         _playerStateModel.OnStateChanged += UpdateCameraViews;
         UpdateCameraViews(_playerStateModel.CurrentPlayerState);
+    }
+
+    private void OnDestroy()
+    {
+        _playerStateModel.OnStateChanged -= UpdateCameraViews;
     }
 
     void UpdateCameraViews(PlayerState state)

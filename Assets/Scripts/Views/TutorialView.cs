@@ -24,6 +24,13 @@ public class TutorialView : MonoBehaviour
         _tutorialCanvas.enabled = false;
     }
 
+    private void OnDestroy()
+    {
+        _tutorialModel.OnTutorialStart -= StartTutorial;
+        _tutorialModel.OnNextTutorialStep -= NextTutorial;
+        _tutorialModel.OnTutorialFinished -= CompleteTutorial;
+    }
+
     void StartTutorial()
     {
         var currentTutorialInfo = _tutorialModel.CurrentTutorial;

@@ -1,17 +1,13 @@
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 using DG.Tweening;
-
 using UnityEngine;
 
 using Niantic.ARDK.Utilities;
 using Niantic.ARDK.AR.HitTest;
-using Niantic.ARDK.Extensions;
-using Niantic.ARDK.Templates;
 using Niantic.ARDK.Utilities.Input.Legacy;
 
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class SolarPlacementController: MonoBehaviour
 {
@@ -34,7 +30,12 @@ public class SolarPlacementController: MonoBehaviour
         GalaxyModel.OnStartGame += () => SetPlacingActive(true);
         PlacementModel.OnSolarSystemPlaced += InitSolarSystem;
     }
-    
+
+    private void OnDestroy()
+    {
+        PlacementModel.OnSolarSystemPlaced -= InitSolarSystem;
+    }
+
     void InitSolarSystem()
     {
         FaderModel.StartFading();

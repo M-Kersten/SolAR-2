@@ -136,18 +136,16 @@ public class SkyController : MonoBehaviour
 
     IEnumerator GetRequest(string requestURL)
     {
-        using (UnityWebRequest webRequest = UnityWebRequest.Get(requestURL))
+        using var webRequest = UnityWebRequest.Get(requestURL);
+        //Studio05.Logger.Add("Horizon API Get Request: " + requestURL);
+        yield return webRequest.SendWebRequest();
+        if (webRequest.isNetworkError)
         {
-            //Studio05.Logger.Add("Horizon API Get Request: " + requestURL);
-            yield return webRequest.SendWebRequest();
-            if (webRequest.isNetworkError)
-            {
-                //InitNextRequest();
-            }
-            else
-            {
-                ParseResult(webRequest.downloadHandler.text);
-            }
+            //InitNextRequest();
+        }
+        else
+        {
+            ParseResult(webRequest.downloadHandler.text);
         }
     }
 
@@ -343,11 +341,11 @@ public class SkyController : MonoBehaviour
     private void SaveJson()
     {
         // Parse Configuration VO to JSON
-        string json = JsonUtility.ToJson(skyModel.CurrentHorizonVO);
+        var json = JsonUtility.ToJson(skyModel.CurrentHorizonVO);
 
         // Save JSON file locally
-        string path = Application.dataPath + "/Resources/JSON/" + skyModel.CurrentHorizonVO.id + ".json";
-        StreamWriter writer = new StreamWriter(path, false);
+        var path = Application.dataPath + "/Resources/JSON/" + skyModel.CurrentHorizonVO.id + ".json";
+        var writer = new StreamWriter(path, false);
         writer.WriteLine(json);
         writer.Close();
     }

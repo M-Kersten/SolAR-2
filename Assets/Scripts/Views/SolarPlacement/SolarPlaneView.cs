@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Niantic.ARDK.Extensions;
 
@@ -24,6 +25,15 @@ public class SolarPlaneView : MonoBehaviour
         }
         
         SetPlanesInactive();
+    }
+
+    private void OnDestroy()
+    {
+        if (_galaxyModel)
+            _galaxyModel.OnStartGame -= SetPlanesActive;
+        
+        if (_placementModel)
+            _placementModel.OnSolarSystemPlaced -= SetPlanesInactive;
     }
 
     void SetPlanesActive()

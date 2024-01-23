@@ -11,6 +11,11 @@ public class PlacementController : MonoBehaviour
         PlacementModel.OnSolarSystemPlaced += InitSolarSystem;
     }
 
+    private void OnDestroy()
+    {
+        PlacementModel.OnSolarSystemPlaced -= InitSolarSystem;
+    }
+
     public void PlaceSolarSystem()
     {
         PlacementModel.PlaceSolarSystem();

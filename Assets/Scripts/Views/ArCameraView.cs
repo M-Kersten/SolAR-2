@@ -42,6 +42,9 @@ public class ArCameraView: MonoBehaviour
 
     private void OnDestroy()
     {
+        _planetModel.OnSpawnedOnPlanet -= CalculateOffset;
+        _playerStateModel.OnStateChanged -= CheckForOffset;
+        
         ARSessionFactory.SessionInitialized -= _OnSessionInitialized;
 
         var session = _session;

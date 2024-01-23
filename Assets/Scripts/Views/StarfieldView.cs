@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class StarfieldView: MonoBehaviour
@@ -16,6 +17,15 @@ public class StarfieldView: MonoBehaviour
         _placementModel = FindObjectOfType<PlacementModel>();
         if (_placementModel)
             _placementModel.OnSolarSystemPlaced += EnableStarfield;
+    }
+
+    private void OnDestroy()
+    {
+        if (_galaxyModel)
+            _galaxyModel.OnStartGame -= DisableStarfield;
+
+        if (_placementModel)
+            _placementModel.OnSolarSystemPlaced -= EnableStarfield;
     }
 
     void EnableStarfield()

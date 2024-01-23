@@ -20,6 +20,11 @@ public class TutorialController: MonoBehaviour
         PlayerStateModel.UpdateState(TutorialModel.TutorialSeen ? PlayerState.Intro : PlayerState.Tutorial);
     }
 
+    private void OnDestroy()
+    {
+        PlayerStateModel.OnStateChanged -= CheckForTutorialState;
+    }
+
     void CheckForTutorialState(PlayerState state)
     {
         if (state == PlayerState.Tutorial)

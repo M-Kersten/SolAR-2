@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,6 +25,18 @@ public class PlacementCanvasView: MonoBehaviour
         
         DisableCanvas();
         PlaceButton.gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        if (_galaxyModel)
+            _galaxyModel.OnStartGame -= EnableCanvas;
+
+        if (_placementModel)
+        {
+            _placementModel.OnSolarSystemPlaced -= DisableCanvas;
+            _placementModel.OnSolarSystemMoved -= EnablePlaceButton;
+        }
     }
 
     void EnablePlaceButton()

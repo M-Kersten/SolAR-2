@@ -22,20 +22,21 @@ public class PlanetView : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("VisitCollider"))
-        {
-            _dialogController.Visit(PlanetName.ToString());
-            _botController.FlyToPlanet(transform.position);
-            _planetModel.UpdatePlanetInfo(PlanetName);
-        }
+        if (collision.gameObject.CompareTag(_planetModel.VisitorColliderTag))
+            VisitPlanet();
+    }
+    
+    void VisitPlanet()
+    {
+        _dialogController.Visit(PlanetName.ToString());
+        _botController.FlyToPlanet(transform.position);
+        _planetModel.UpdatePlanetInfo(PlanetName);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("VisitCollider"))
-        {
+        if (other.gameObject.CompareTag(_planetModel.VisitorColliderTag))
             _botController.BackToPlayer();
-        }
     }
 
     private void OnMouseDown()

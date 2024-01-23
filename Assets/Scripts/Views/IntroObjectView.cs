@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class IntroObjectView : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class IntroObjectView : MonoBehaviour
     {
         _playerStateModel = FindObjectOfType<PlayerStateModel>();
         _playerStateModel.OnStateChanged += CheckEnabled;
+    }
+
+    private void OnDestroy()
+    {
+        _playerStateModel.OnStateChanged -= CheckEnabled;
     }
 
     void CheckEnabled(PlayerState state)

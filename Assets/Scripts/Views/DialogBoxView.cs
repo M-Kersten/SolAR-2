@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -12,13 +13,19 @@ public class DialogBoxView : MonoBehaviour
 
     private void Start()
     {
-        _arCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        _arCamera = Camera.main.GetComponent<Camera>();
         TalkBox.alpha = 0;
         _dialogModel = FindObjectOfType<DialogModel>();
         if (_dialogModel)
             _dialogModel.OnTalk += Talk;
     }
-    
+
+    private void OnDestroy()
+    {
+        if (_dialogModel)
+            _dialogModel.OnTalk -= Talk;
+    }
+
     public void Talk(DialogItem dialog)
     {
         TalkBox.alpha = 0;

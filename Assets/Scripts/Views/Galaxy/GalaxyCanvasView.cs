@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Canvas))]
@@ -10,13 +11,21 @@ public class GalaxyCanvasView: MonoBehaviour
     private void Awake()
     {
         _galaxyModel = FindObjectOfType<GalaxyModel>();
-        if (_galaxyModel)
-        {
-            _galaxyModel.OnZoomInStart += value => DisableCanvas();
-            _galaxyModel.OnZoomOutComplete += EnableCanvas;
-        }
+        _galaxyModel.OnZoomInStart += OnZoomInStart;
+        _galaxyModel.OnZoomOutComplete += EnableCanvas;
     }
-    
+
+    private void OnDestroy()
+    {
+        _galaxyModel.OnZoomOutComplete -= EnableCanvas;
+        _galaxyModel.OnZoomInStart -= OnZoomInStart;
+    }
+
+    void OnZoomInStart(Vector3 value)
+    {
+        DisableCanvas();
+    }
+
     void EnableCanvas()
     {
         CanvasGroup.interactable = true;
